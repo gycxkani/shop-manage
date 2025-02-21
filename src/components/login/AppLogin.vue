@@ -56,11 +56,11 @@ export default {
       ElMessage({
         message: "登录成功",
         type: "success",
-        duration: 3000,
+        duration: 1000,
       });
       setTimeout(() => {
         this.$router.push("/home");
-      }, 3000);
+      }, 1000);
     },
   },
 };
