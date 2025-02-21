@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import AppHome from "../components/home/AppHome.vue";
-import store from "../store";
+import AppHome from "@/components/home/AppHome.vue";
+import store from "@/store";
 
 const routes = [
   {
@@ -18,7 +18,7 @@ const routes = [
         name: "Order",
         component: () =>
           import(
-            /* webpackChunkName: "order" */ "../components/order/AppOrder.vue"
+            /* webpackChunkName: "order" */ "@/components/order/AppOrder.vue"
           ),
       },
     ],
@@ -28,7 +28,7 @@ const routes = [
     path: "/login",
     name: "Login",
     component: () =>
-      import(/* webpackChunkName: "login" */ "../components/login/AppLogin.vue"),
+      import(/* webpackChunkName: "login" */ "@/components/login/AppLogin.vue"),
   },
   {
     path: "/about",
@@ -37,13 +37,13 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+      import(/* webpackChunkName: "about" */ "@/views/AboutView.vue"),
   },
   {
     path: "/:pathMatch(.*)*", // 匹配所有未知路径
     name: "NotFound",
     component: () =>
-      import(/* webpackChunkName: "404" */ "../views/NotFound.vue"),
+      import(/* webpackChunkName: "404" */ "@/views/NotFound.vue"),
   },
 ];
 

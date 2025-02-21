@@ -1,6 +1,15 @@
 const { defineConfig } = require("@vue/cli-service");
+const path = require("path");
+
 module.exports = defineConfig({
   transpileDependencies: true,
+  configureWebpack: {
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "src"),
+      },
+    },
+  },
   chainWebpack: (config) => {
     config.plugin("define").tap((definitions) => {
       Object.assign(definitions[0], {
@@ -11,4 +20,8 @@ module.exports = defineConfig({
       return definitions;
     });
   },
+  publicPath: process.env.NODE_ENV === "production" ? "/shop-manage/" : "/",
+  outputDir: "docs",
+  assetsDir: "static",
+  lintOnSave: false,
 });

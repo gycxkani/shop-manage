@@ -4,7 +4,7 @@
       <el-container id="top">
         <img
           style="width: 25px; height: 25px; margin: auto; margin-right: 0"
-          src="../../assets/logo.png"
+          src="@/assets/logo.png"
           alt="Vue logo"
         />
         <div
@@ -101,7 +101,7 @@
 </template>
 
 <script>
-import store from "../../store/index";
+import store from "@/store/index";
 export default {
   name: "AppHome",
   methods: {

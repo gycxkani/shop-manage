@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import store from "../../store/index";
+import store from "@/store/index";
 import { ElMessage } from "element-plus";
 export default {
   name: "AppLogin",
@@ -69,7 +69,7 @@ export default {
 <style scoped>
 #container {
   background: #595959;
-  background-image: url("../../assets/login_bg.jpg");
+  background-image: url("@/assets/login_bg.jpg");
   height: 100%;
   width: 100%;
   position: absolute;
