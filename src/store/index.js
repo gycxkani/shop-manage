@@ -12,7 +12,16 @@ const store = createStore({
       return state.userName.length > 0;
     },
   },
-  mutations: {},
+  mutations: {
+    clearUserInfo(state) {
+      state.userName = "";
+      state.userPassword = "";
+    },
+    registUserInfo(state, { name, password }) {
+      state.userName = name;
+      state.userPassword = password;
+    },
+  },
   actions: {},
   modules: {},
 });
