@@ -6,14 +6,14 @@
     <div class="input">
       <el-input
         v-model="name"
-        prefix-icon="el-icon-user"
+        prefix-icon="user"
         placeholder="请输入用户名"
       ></el-input>
     </div>
     <div class="input">
       <el-input
         v-model="password"
-        prefix-icon="el-icon-lock"
+        prefix-icon="lock"
         placeholder="请输入密码"
         show-password
       ></el-input>
@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import store from "../store/index";
+import store from "../../store/index";
 import { ElMessage } from "element-plus";
 export default {
   name: "AppLogin",
@@ -69,7 +69,7 @@ export default {
 <style scoped>
 #container {
   background: #595959;
-  background-image: url("../assets/login_bg.jpg");
+  background-image: url("../../assets/login_bg.jpg");
   height: 100%;
   width: 100%;
   position: absolute;

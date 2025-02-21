@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import AppHome from "../components/AppHome.vue";
+import AppHome from "../components/home/AppHome.vue";
 import store from "../store";
 
 const routes = [
@@ -12,12 +12,23 @@ const routes = [
     path: "/home",
     name: "Home",
     component: AppHome,
+    children: [
+      {
+        path: "order/:type", // 0是普通订单，1是秒杀订单
+        name: "Order",
+        component: () =>
+          import(
+            /* webpackChunkName: "order" */ "../components/order/AppOrder.vue"
+          ),
+      },
+    ],
+    redirect: "/home/order/0",
   },
   {
     path: "/login",
     name: "Login",
     component: () =>
-      import(/* webpackChunkName: "login" */ "../components/AppLogin.vue"),
+      import(/* webpackChunkName: "login" */ "../components/login/AppLogin.vue"),
   },
   {
     path: "/about",
