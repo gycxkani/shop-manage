@@ -26,7 +26,7 @@ const routes = [
         name: "Goods",
         component: () =>
           import(
-            /* webpackChunkName: "order" */ "@/components/goods/AppGoods.vue"
+            /* webpackChunkName: "goods" */ "@/components/goods/AppGoods.vue"
           ),
       },
       {
@@ -34,16 +34,67 @@ const routes = [
         name: "AddGoods",
         component: () =>
           import(
-            /* webpackChunkName: "order" */ "@/components/goods/AddGoods.vue"
+            /* webpackChunkName: "goods" */ "@/components/goods/AddGoods.vue"
           ),
       },
       {
-        path: 'category',
-        name:'GoodCategory',
+        path: "category",
+        name: "GoodCategory",
         component: () =>
           import(
-            /* webpackChunkName: "order" */ "@/components/goods/GoodCategory.vue"
+            /* webpackChunkName: "goods" */ "@/components/goods/GoodCategory.vue"
           ),
+      },
+      {
+        path: "ownerlist",
+        name: "ManagerList",
+        component: () =>
+          import(
+            /* webpackChunkName: "manager" */ "@/components/manager/ManagerList.vue"
+          ),
+      },
+      {
+        path: "ownerreq",
+        name: "ManagerReqList",
+        component: () =>
+          import(
+            /* webpackChunkName: "manager" */ "@/components/manager/ManagerReqList.vue"
+          ),
+      },
+      {
+        path: "ownerorder",
+        name: "ManagerOrder",
+        component: () =>
+          import(
+            /* webpackChunkName: "manager" */ "@/components/manager/ManagerOrder.vue"
+          ),
+      },
+      {
+        path: "tradeinfo",
+        name: "TradeInfo",
+        component: () =>
+          import(
+            /* webpackChunkName: "financial" */ "@/components/financial/TradeInfo.vue"
+          ),
+        
+      },
+      {
+        path: "tradelist",
+        name: "TradeList",
+        component: () =>
+          import(
+            /* webpackChunkName: "financial" */ "@/components/financial/TradeList.vue"
+          ),
+        
+      },
+      {
+        path: "data",
+        name: "DataCom",
+        component: () =>
+          import(
+            /* webpackChunkName: "financial" */ "@/components/financial/DataCom.vue"
+          ),
+        
       },
     ],
     redirect: "/home/order/0",
