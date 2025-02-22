@@ -21,6 +21,30 @@ const routes = [
             /* webpackChunkName: "order" */ "@/components/order/AppOrder.vue"
           ),
       },
+      {
+        path: "goods/:type", // 0是普通商品 1是秒杀商品 2是今日推荐,
+        name: "Goods",
+        component: () =>
+          import(
+            /* webpackChunkName: "order" */ "@/components/goods/AppGoods.vue"
+          ),
+      },
+      {
+        path: "addGoods/:type", // 0是普通商品 1是秒杀商品 2是今日推荐,
+        name: "AddGoods",
+        component: () =>
+          import(
+            /* webpackChunkName: "order" */ "@/components/goods/AddGoods.vue"
+          ),
+      },
+      {
+        path: 'category',
+        name:'GoodCategory',
+        component: () =>
+          import(
+            /* webpackChunkName: "order" */ "@/components/goods/GoodCategory.vue"
+          ),
+      },
     ],
     redirect: "/home/order/0",
   },
