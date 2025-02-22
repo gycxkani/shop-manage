@@ -19,13 +19,15 @@
     <el-container class="content-row">
       <div class="input-tip">商品封面:</div>
       <el-upload :auto-upload="false" :limit="1" list-type="picture-card">
-        <i class="el-icon-plus"></i>
+        <!-- <i class="el-icon-plus"></i> -->
+        <el-icon><Plus /></el-icon>
       </el-upload>
     </el-container>
     <el-container class="content-row">
       <div class="input-tip">列表图片:</div>
       <el-upload :auto-upload="false" :limit="5" list-type="picture-card">
-        <i class="el-icon-plus"></i>
+        <!-- <i class="el-icon-plus"></i> -->
+        <el-icon><Plus /></el-icon>
       </el-upload>
     </el-container>
     <el-container class="content-row">

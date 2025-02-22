@@ -60,6 +60,8 @@ export default {
           name: value,
           manager: "管理员用户01",
         });
+      }).catch((err) => {
+        console.log(err);
       });
     },
   },
