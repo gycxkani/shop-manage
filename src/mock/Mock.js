@@ -49,7 +49,7 @@ const Mock = {
         mockjs.mock({
           name:
             (type == 0 ? "普通商品 " : type == 1 ? "秒杀商品" : "今日推荐") + i,
-          img: mockjs.Random.dataImage("60x100", "商品示例图"),
+          img: mockjs.Random.dataImage("60x60", "商品图"),
           price: mockjs.Random.integer(20, 500) + "元",
           sellCount: mockjs.Random.integer(10, 100),
           count: mockjs.Random.integer(10, 100),

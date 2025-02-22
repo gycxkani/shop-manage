@@ -59,7 +59,7 @@
             <div style="text-align: center">
               <el-image
                 :src="scope.row.img"
-                style="width: 60px; height: 100px"
+                style="width: 60px; height: 60px"
               />
             </div>
             <div style="text-align: center">{{ scope.row.name }}</div>
@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import Mock from "../../mock/Mock";
+import Mock from "@/mock/Mock";
 export default {
   data() {
     return {
