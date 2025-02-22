@@ -9,13 +9,13 @@
         </el-container>
         <el-container class="content-row">
             <el-radio-group @change="changeType" v-model="type">
-                <el-radio-button value="总交易额"></el-radio-button>
-                <el-radio-button value="商品交易额"></el-radio-button>
-                <el-radio-button value="新用户销量"></el-radio-button>
-                <el-radio-button value="方可转化率"></el-radio-button>
-                <el-radio-button value="下单转化率"></el-radio-button>
-                <el-radio-button value="付款转化率"></el-radio-button>
-                <el-radio-button value="流水"></el-radio-button>
+                <el-radio-button value="总交易额">总交易额</el-radio-button>
+                <el-radio-button value="商品交易额">商品交易额</el-radio-button>
+                <el-radio-button value="新用户销量">新用户销量</el-radio-button>
+                <el-radio-button value="方可转化率">方可转化率</el-radio-button>
+                <el-radio-button value="下单转化率">下单转化率</el-radio-button>
+                <el-radio-button value="付款转化率">付款转化率</el-radio-button>
+                <el-radio-button value="流水">流水</el-radio-button>
             </el-radio-group>
         </el-container>
         <charts id="charts" :xData="xData" :data="chartsData"></charts>
