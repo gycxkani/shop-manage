@@ -21,7 +21,7 @@ module.exports = defineConfig({
     });
   },
   publicPath: process.env.NODE_ENV === "production" ? "/shop-manage/" : "/",
-  outputDir: "docs",
-  assetsDir: "static",
-  lintOnSave: false,
+  // outputDir: "docs",
+  // assetsDir: "static",
+  // lintOnSave: false,
 });
